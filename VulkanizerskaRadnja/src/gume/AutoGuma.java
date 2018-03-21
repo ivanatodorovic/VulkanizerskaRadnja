@@ -32,7 +32,7 @@ public class AutoGuma {
 	}
 	/**
 	 * Metoda za postavljanje naziva marke modela auto gume.
-	 * @param ime marke kao String
+	 * @param markaModel ime marke kao String
 	 * @throws java.lang.RuntimeException ukoliko ne parametar null ili ima manje od 3 znaka
 	 */
 	public void setMarkaModel(String markaModel) {
@@ -49,7 +49,7 @@ public class AutoGuma {
 	}
 	/**
 	 * Postavlja vrednost precnika gume.
-	 * @param precnik
+	 * @param precnik gume kao int
 	 * @throws java.lang.RuntimeException za sve vrednosti precnika koje su van opsega 13-22
 	 */
 	public void setPrecnik(int precnik) {
@@ -104,7 +104,7 @@ public class AutoGuma {
 	}
 	/**
 	 * Redefinisana metoda equals, za poredjenje dva objekta klase AutoGuma
-	 * @param objekat
+	 * @param obj objekat klase Object
 	 * @return true ako su poredjeni objekti jednaki ili false ako nisu jednaki ili ulazni objekat nije instanca klase AutoGuma
 	 */
 	@Override
