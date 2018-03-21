@@ -23,13 +23,16 @@ public class AutoGuma {
 	 * Visina automobilske gume 
 	 */
 	private int visina = 0;
-	
+	/**
+	 * Metoda vraca vrednost atributa markaModel.
+	 * @return ime modela kao String 
+	 */
 	public String getMarkaModel() {
 	return markaModel;
 	}
 	/**
 	 * Metoda za postavljanje naziva marke modela auto gume.
-	 * @param markaModel
+	 * @param ime marke kao String
 	 * @throws java.lang.RuntimeException ukoliko ne parametar null ili ima manje od 3 znaka
 	 */
 	public void setMarkaModel(String markaModel) {
@@ -37,7 +40,10 @@ public class AutoGuma {
 	throw new RuntimeException("Morate uneti marku i model");
 	this.markaModel = markaModel;
 	}
-	
+	/**
+	 * Metoda vraca vrednost atributa precnik.
+	 * @return precnik gume kao int
+	 */
 	public int getPrecnik() {
 	return precnik;
 	}
@@ -47,31 +53,38 @@ public class AutoGuma {
 	 * @throws java.lang.RuntimeException za sve vrednosti precnika koje su van opsega 13-22
 	 */
 	public void setPrecnik(int precnik) {
-	if (precnik < 13 && precnik > 22)
+	if (precnik < 13 || precnik > 22)
 	throw new RuntimeException("Precnik van opsega");
 	this.precnik = precnik;
 	}
-	
+	/**
+	 * Metoda vraca vrednost parametra sirina.
+	 * @return sirinu gume kao int
+	 */
 	public int getSirina() {
 	return sirina;
 	}
 	
 	/**
 	 * Postavlja vrednost sirine gume.
-	 * @param sirina
+	 * @param sirina gume kao int
 	 * @throws java.lang.RuntimeException za sve vrednosti ulaznog parmetra koje su van opsega 135-355
 	 */
 	public void setSirina(int sirina) {
-	if (sirina < 135 && sirina > 355)
+	if (sirina < 135 || sirina > 355)
 	throw new RuntimeException("Sirina van opsega");
 	this.sirina = sirina;
 	}
+	/**
+	 * Vraca vrednost parametra visina.
+	 * @return visinu gume kao int
+	 */
 	public int getVisina() {
 	return visina;
 	}
 	/**
 	 * Postavlja vrednost visine gume.
-	 * @param visina
+	 * @param visina gume kao int
 	 * @throws java.lang.RuntimeException za sve vrednosti ulaznog parmetra koje su van opsega 25-95
 	 */
 	public void setVisina(int visina) {
@@ -91,7 +104,7 @@ public class AutoGuma {
 	}
 	/**
 	 * Redefinisana metoda equals, za poredjenje dva objekta klase AutoGuma
-	 * @param obj(objekat)
+	 * @param objekat
 	 * @return true ako su poredjeni objekti jednaki ili false ako nisu jednaki ili ulazni objekat nije instanca klase AutoGuma
 	 */
 	@Override
